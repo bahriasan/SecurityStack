@@ -1,5 +1,6 @@
 # SecurityStack
-Implements and Enables using Security Services(SecurityAccess and Authentication) by CSM/CryIf/CryptoDriver AUTOSAR Modules and OpenSSL as Crypto Driver 
+
+Implements and Enables using Security Services(SecurityAccess and Authentication) by CSM/CryIf/CryptoDriver AUTOSAR Modules and OpenSSL as Crypto Driver
 SecurityAccess: Has 3 security Levels, SecurityLevel-1/3/5. All are secured with AES128 symmetric crypto. Access is enabled with Challenge Response
 Authentication: Provides RSA2048 Challenge-Response Asymmetric Cryptography. Signature is 256 Byte long.
 
@@ -23,3 +24,10 @@ Authentication:
 SecurityStack 0x02 0x29 0x05
 SecurityStack 0x02 0x31 0x06
 SecurityStack 0x11 0x02 0x29 0x06 SIGNATURE
+
+
+
+TO DO:
+
+1. AUTOSAR Requirement Tracking List will be added for Csm/CryIf/CryptoDriver
+2. KeyManagement Services to be added
