@@ -1,0 +1,14 @@
+﻿  main.c
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(559,3): warning C4133: 'function': incompatible types - from 'size_t *' to 'uint32 *'
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(568,3): warning C4133: 'function': incompatible types - from 'size_t *' to 'uint32 *'
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(577,3): warning C4133: 'function': incompatible types - from 'size_t *' to 'uint32 *'
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(601,3): warning C4267: 'function': conversion from 'size_t' to 'uint32', possible loss of data
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(611,3): warning C4267: 'function': conversion from 'size_t' to 'uint32', possible loss of data
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(621,3): warning C4267: 'function': conversion from 'size_t' to 'uint32', possible loss of data
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(712,18): warning C4018: '<': signed/unsigned mismatch
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(841,33): warning C4047: 'function': 'char *' differs in levels of indirection from 'uint8 (*)[4]'
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(841,33): warning C4024: 'SeedRequest': different types for formal and actual parameter 1
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(851,33): warning C4047: 'function': 'char *' differs in levels of indirection from 'uint8 (*)[4]'
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(851,33): warning C4024: 'SeedRequest': different types for formal and actual parameter 1
+C:\Users\BahriAsan\source\repos\SecurityStack\SecurityStack\main.c(662,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  SecurityStack.vcxproj -> C:\Users\BahriAsan\source\repos\SecurityStack\x64\Debug\SecurityStack.exe
