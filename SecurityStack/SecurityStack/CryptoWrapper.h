@@ -86,7 +86,6 @@ typedef struct
 	EVP_MD_CTX* md_mctx_buffer;
 }mctx_buffer;
 
-Std_ReturnType Hash(Crypto_JobType* job, uint8* key, size_t keyLength);
 Std_ReturnType MacGenerate(Crypto_JobType* job, uint8* key, size_t keyLength);
 Std_ReturnType MacVerify(Crypto_JobType* job, uint8* key, size_t keyLength);
 Std_ReturnType Random_Generate(Crypto_JobType* job, uint8* key, size_t keyLength);

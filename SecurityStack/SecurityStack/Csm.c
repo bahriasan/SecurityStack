@@ -140,20 +140,6 @@ Std_ReturnType Csm_MacVerify(
 }
 
 
-/*[SWS_Csm_00980] Definition of API function Csm_Hash*/
-Std_ReturnType Csm_Hash(
-	uint32 jobId,
-	Crypto_OperationModeType mode,
-	const uint8* dataPtr,
-	uint32 dataLength,
-	uint8* resultPtr,
-	uint32* resultLengthPtr
-)
-{
-	//Call Relevant CryIf Function
-}
-
-
 /*[SWS_Csm_00992] Definition of API function Csm_SignatureGenerate*/
 Std_ReturnType Csm_SignatureGenerate(
 	uint32 jobId,

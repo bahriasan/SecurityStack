@@ -505,12 +505,6 @@ static Std_ReturnType Signature_Verify_Finish(Crypto_JobType* job)
 }
 
 
-
-Std_ReturnType Hash(Crypto_JobType* job, uint8* key, size_t keyLength)
-{ 
-
-}
-
 Std_ReturnType MacGenerate(Crypto_JobType* job, uint8* key, size_t keyLength)
 {
 	if (CRYPTO_OPERATIONMODE_START == job->jobPrimitiveInputOutput.mode)

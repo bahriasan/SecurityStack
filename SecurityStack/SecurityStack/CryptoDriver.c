@@ -3,7 +3,7 @@
 
 static fn job_Redirection[1][23] =
 {
-	{&Hash, &MacGenerate, &MacVerify, NULL, NULL, NULL, NULL, &Signature_Generate, &Signature_Verify, NULL, NULL, &Random_Generate, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL}//Object_0 
+	{NULL, &MacGenerate, &MacVerify, NULL, NULL, NULL, NULL, &Signature_Generate, &Signature_Verify, NULL, NULL, &Random_Generate, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL}//Object_0 
 };
 
 void Crypto_Init(
