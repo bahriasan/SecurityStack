@@ -144,7 +144,7 @@ typedef enum CryptoDriverObjectIds
 typedef struct CryptoDriverObject
 {
 	uint32 CryptoDriverObjectId;
-	CryptoPrimitive* CryptoPrimitiveRef[10];
+	CryptoPrimitive* CryptoPrimitiveRef[9];
 	CryptoPrimitive* CryptoDefaultRandomPrimitiveRef;
 	uint32 CryptoQueueSize;
 	EcucPartition* CryptoDriverObjectEcucPartitionRef;
@@ -154,7 +154,7 @@ typedef struct CryptoDriverObject
 typedef struct Crypto_ConfigType
 {
 	CryptoGeneral CryptoGeneral_;
-	CryptoPrimitive CryptoPrimitives[10];
+	CryptoPrimitive CryptoPrimitives[9];
 	CryptoKeyElement CryptoKeyElements[5];
 	CryptoKeyType CryptoKeyTypes[5];
 	CryptoKey CryptoKeys[5];

@@ -39,7 +39,6 @@ CryptoKey CryptoKey_SecLevel5 = { CRYPTO_KEY_MAC_SECLEVEL5 , &CryptoKeyType_Mac_
 Crypto_AlgorithmFamilyType CryptoPrimitiveAlgorithmFamilyCustom = CRYPTO_ALGOFAM_CUSTOM;
 Crypto_AlgorithmModeType CryptoPrimitiveAlgorithmModeCustom = CRYPTO_ALGOMODE_CUSTOM;
 
-CryptoPrimitive CryptoPrimitive_Hash = { CRYPTO_HASH , CRYPTO_ALGOFAM_SHA2_256 , CRYPTO_ALGOMODE_CMAC, CRYPTO_ALGOFAM_SHA2_256 , FALSE, &CryptoPrimitiveAlgorithmFamilyCustom , &CryptoPrimitiveAlgorithmFamilyCustom , &CryptoPrimitiveAlgorithmModeCustom };
 CryptoPrimitive CryptoPrimitive_MacGenerate_SecLevel1 = { CRYPTO_MACGENERATE , CRYPTO_ALGOFAM_AES , CRYPTO_ALGOMODE_CMAC, CRYPTO_ALGOFAM_AES , FALSE, &CryptoPrimitiveAlgorithmFamilyCustom , &CryptoPrimitiveAlgorithmFamilyCustom , &CryptoPrimitiveAlgorithmModeCustom };
 CryptoPrimitive CryptoPrimitive_MacVerify_SecLevel1 = { CRYPTO_MACVERIFY , CRYPTO_ALGOFAM_AES , CRYPTO_ALGOMODE_CMAC, CRYPTO_ALGOFAM_AES , FALSE, &CryptoPrimitiveAlgorithmFamilyCustom , &CryptoPrimitiveAlgorithmFamilyCustom , &CryptoPrimitiveAlgorithmModeCustom };
 CryptoPrimitive CryptoPrimitive_MacGenerate_SecLevel3 = { CRYPTO_MACGENERATE , CRYPTO_ALGOFAM_AES , CRYPTO_ALGOMODE_CMAC, CRYPTO_ALGOFAM_AES , FALSE, &CryptoPrimitiveAlgorithmFamilyCustom , &CryptoPrimitiveAlgorithmFamilyCustom , &CryptoPrimitiveAlgorithmModeCustom };
@@ -54,7 +53,6 @@ Crypto_ConfigType CryptoDriver_config =
 {
 	{TRUE, TRUE, 1.f, CRYPTO_INSTANCE_ID0, &EcucPartition_0},	//CryptoGeneral
 	{	//CryptoPrimitive
-		{ CRYPTO_HASH, CRYPTO_ALGOFAM_SHA2_256, CRYPTO_ALGOMODE_CMAC, CRYPTO_ALGOFAM_SHA2_256, TRUE, &CryptoPrimitiveAlgorithmFamilyCustom, &CryptoPrimitiveAlgorithmFamilyCustom, &CryptoPrimitiveAlgorithmModeCustom },						//CryptoPrimitive_Hash
 		{ CRYPTO_MACGENERATE, CRYPTO_ALGOFAM_SHA2_256, CRYPTO_ALGOMODE_CMAC, CRYPTO_ALGOFAM_SHA2_256, TRUE, &CryptoPrimitiveAlgorithmFamilyCustom, &CryptoPrimitiveAlgorithmFamilyCustom, &CryptoPrimitiveAlgorithmModeCustom },				//CryptoPrimitive_MacGenerate_SecLevel1
 		{ CRYPTO_MACVERIFY, CRYPTO_ALGOFAM_SHA2_256, CRYPTO_ALGOMODE_CMAC, CRYPTO_ALGOFAM_SHA2_256, TRUE, &CryptoPrimitiveAlgorithmFamilyCustom, &CryptoPrimitiveAlgorithmFamilyCustom, &CryptoPrimitiveAlgorithmModeCustom },					//CryptoPrimitive_MacVerify_SecLevel1
 		{ CRYPTO_MACGENERATE, CRYPTO_ALGOFAM_SHA2_256, CRYPTO_ALGOMODE_CMAC, CRYPTO_ALGOFAM_SHA2_256, TRUE, &CryptoPrimitiveAlgorithmFamilyCustom, &CryptoPrimitiveAlgorithmFamilyCustom, &CryptoPrimitiveAlgorithmModeCustom },				//CryptoPrimitive_MacGenerate_SecLevel3
@@ -87,7 +85,7 @@ Crypto_ConfigType CryptoDriver_config =
 		{ CRYPTO_KEY_RSA2048PUBLIC , &CryptoKeyType_SignatureVerify , &CryptoNvBlock_SignatureVerify }
 	},
 	{	//CryptoDriverObject
-		{CRYPTO_DRIVER_OBJECT_ID0, {&CryptoPrimitive_Hash, &CryptoPrimitive_MacGenerate_SecLevel1, &CryptoPrimitive_MacVerify_SecLevel1, &CryptoPrimitive_MacGenerate_SecLevel3, &CryptoPrimitive_MacVerify_SecLevel3, &CryptoPrimitive_MacGenerate_SecLevel5, &CryptoPrimitive_MacVerify_SecLevel5,&CryptoPrimitive_SeedGenerate, &CryptoPrimitive_SignatureGenerate, &CryptoPrimitive_SignatureVerify }, NULL, 1u, &EcucPartition_0, NULL}
+		{CRYPTO_DRIVER_OBJECT_ID0, {&CryptoPrimitive_MacGenerate_SecLevel1, &CryptoPrimitive_MacVerify_SecLevel1, &CryptoPrimitive_MacGenerate_SecLevel3, &CryptoPrimitive_MacVerify_SecLevel3, &CryptoPrimitive_MacGenerate_SecLevel5, &CryptoPrimitive_MacVerify_SecLevel5,&CryptoPrimitive_SeedGenerate, &CryptoPrimitive_SignatureGenerate, &CryptoPrimitive_SignatureVerify }, NULL, 1u, &EcucPartition_0, NULL}
 	},
 	{
 		{ (uint16)0, &NVM_Block0 ,CRYPTO_NV_BLOCK_IMMEDIATE },

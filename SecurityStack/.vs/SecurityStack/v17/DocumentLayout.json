@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|solutionrelative:SecurityStack\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\CryptoDriver_Cfg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|solutionrelative:SecurityStack\\CryptoDriver_Cfg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\CryptoDriver_Cfg.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|solutionrelative:SecurityStack\\CryptoDriver_Cfg.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\CryptoDriver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|solutionrelative:SecurityStack\\CryptoDriver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\Csm_Cfg.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|solutionrelative:SecurityStack\\Csm_Cfg.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\Csm_Cfg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FC7108B7-C130-4198-B2FD-30645FD828A9}|SecurityStack\\SecurityStack.vcxproj|solutionrelative:SecurityStack\\Csm_Cfg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\main.c",
+              "RelativeDocumentMoniker": "SecurityStack\\main.c",
+              "ToolTip": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\main.c",
+              "RelativeToolTip": "SecurityStack\\main.c",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-12-01T09:24:30.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CryptoDriver_Cfg.c",
+              "DocumentMoniker": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\CryptoDriver_Cfg.c",
+              "RelativeDocumentMoniker": "SecurityStack\\CryptoDriver_Cfg.c",
+              "ToolTip": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\CryptoDriver_Cfg.c",
+              "RelativeToolTip": "SecurityStack\\CryptoDriver_Cfg.c",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-12-01T09:22:21.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CryptoDriver_Cfg.h",
+              "DocumentMoniker": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\CryptoDriver_Cfg.h",
+              "RelativeDocumentMoniker": "SecurityStack\\CryptoDriver_Cfg.h",
+              "ToolTip": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\CryptoDriver_Cfg.h",
+              "RelativeToolTip": "SecurityStack\\CryptoDriver_Cfg.h",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAJkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-01T09:22:09.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CryptoDriver.h",
+              "DocumentMoniker": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\CryptoDriver.h",
+              "RelativeDocumentMoniker": "SecurityStack\\CryptoDriver.h",
+              "ToolTip": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\CryptoDriver.h",
+              "RelativeToolTip": "SecurityStack\\CryptoDriver.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-01T09:22:07.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Csm_Cfg.h",
+              "DocumentMoniker": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\Csm_Cfg.h",
+              "RelativeDocumentMoniker": "SecurityStack\\Csm_Cfg.h",
+              "ToolTip": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\Csm_Cfg.h",
+              "RelativeToolTip": "SecurityStack\\Csm_Cfg.h",
+              "ViewState": "AgIAAFgBAAAAAAAAAAAIwGYBAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-01T09:20:23.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Csm_Cfg.c",
+              "DocumentMoniker": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\Csm_Cfg.c",
+              "RelativeDocumentMoniker": "SecurityStack\\Csm_Cfg.c",
+              "ToolTip": "C:\\Users\\BahriAsan\\Documents\\GitHub\\SecurityStack\\SecurityStack\\SecurityStack\\Csm_Cfg.c",
+              "RelativeToolTip": "SecurityStack\\Csm_Cfg.c",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAAG8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-12-01T09:16:40.125Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

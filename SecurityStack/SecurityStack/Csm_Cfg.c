@@ -2,7 +2,6 @@
 #include "Csm_Cfg.h"
 
 
-void Notification_Hash(void) {/*TBD*/ }
 void Notification_SeedGenerate(void) {/*TBD*/ }
 void Notification_SecLevel1_MacGenerate(void) {/*TBD*/ }
 void Notification_SecLevel1_MacVerify(void) {/*TBD*/ }
@@ -18,52 +17,46 @@ Crypto_AlgorithmFamilyType CsmAlgorithmFamilyCustom = CRYPTO_ALGOFAM_CUSTOM;
 
 Crypto_AlgorithmModeType CsmAlgorithmModeCustom = CRYPTO_ALGOMODE_CUSTOM;
 
-CsmPrimitives CsmPrimitives_Hash = { 
-	{ CRYPTO_ALGOFAM_SHA2_256, CRYPTO_ALGOFAM_SHA2_256, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CMAC , &CsmAlgorithmModeCustom, 32u, 32u },
-	{0}, {0}, {0}, {0}, {0} };
 
 CsmPrimitives CsmPrimitives_SecLevel1_MacGenerate = { 
-	{0},
 	{ CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, BIT128RESULT },
 	{0}, {0}, {0}, {0} };
 
 CsmPrimitives CsmPrimitives_SecLevel1_MacVerify = { 
-	{0}, {0},
+	{0},
 	{ CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, 32u },
 	{0}, {0}, {0} };
 
 CsmPrimitives CsmPrimitives_SecLevel3_MacGenerate = {
-	{0},
 	{ CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, BIT128RESULT },
 	{0}, {0}, {0}, {0} };
 
 CsmPrimitives CsmPrimitives_SecLevel3_MacVerify = {
-	{0}, {0},
+	{0},
 	{ CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, 32u },
 	{0}, {0}, {0} };
 
 CsmPrimitives CsmPrimitives_SecLevel5_MacGenerate = {
-	{0},
 	{ CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, BIT128RESULT },
 	{0}, {0}, {0}, {0} };
 
 CsmPrimitives CsmPrimitives_SecLevel5_MacVerify = {
-	{0}, {0},
+	{0}, 
 	{ CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, 32u },
 	{0}, {0}, {0} };
 
 CsmPrimitives CsmPrimitives_SeedGenerate = { 
-	{0}, {0}, {0},
+	{0}, {0},
 	{ CRYPTO_ALGOFAM_RNG, CRYPTO_ALGOFAM_NOT_SET, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CTRDRBG , &CsmAlgorithmModeCustom, 32u }, 
 	{0} , {0} };
 
 CsmPrimitives CsmPrimitives_SignatureGenerate = { 
-	{0}, {0}, {0}, {0},
+	{0}, {0}, {0},
 	{ CRYPTO_ALGOFAM_RSA, CRYPTO_ALGOFAM_NOT_SET, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5 , &CsmAlgorithmModeCustom, 32u, RSAPRIVATEKEYLENGTH, BYTE256RESULT },
 	{0} };
 
 CsmPrimitives CsmPrimitives_SignatureVerify = { 
-	{0}, {0}, {0}, {0}, {0},
+	{0}, {0}, {0}, {0},
 	{ CRYPTO_ALGOFAM_RSA, CRYPTO_ALGOFAM_NOT_SET, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5 , &CsmAlgorithmModeCustom, 32u, RSAPUBLICKEYLENGTH, 32u } };
 
 
@@ -100,7 +93,6 @@ const Csm_ConfigType Csm_config =
 		{JOBID_SECLEVEL3_MACVERIFY, JOBPRIO_SECLEVEL3_MACVERIFY, CRYPTO_USE_FNC , &Notification_SecLevel3_MacVerify, &CsmPrimitives_SecLevel3_MacVerify, &CsmQueue_0, &CsmKey_Mac_SecLevel3, CRYPTO_PROCESSING_SYNC, CRYPTO_USE_FNC },//CsmJob_SecLevel3_MacVerify
 		{JOBID_SECLEVEL5_MACGENERATE, JOBPRIO_SECLEVEL5_MACGENERATE, CRYPTO_USE_FNC , &Notification_SecLevel5_MacGenerate, &CsmPrimitives_SecLevel5_MacGenerate, &CsmQueue_0, &CsmKey_Mac_SecLevel5, CRYPTO_PROCESSING_SYNC, CRYPTO_USE_FNC },//CsmJob_SecLevel5_MacGenerate
 		{JOBID_SECLEVEL5_MACVERIFY, JOBPRIO_SECLEVEL5_MACVERIFY, CRYPTO_USE_FNC , &Notification_SecLevel5_MacVerify, &CsmPrimitives_SecLevel5_MacVerify, &CsmQueue_0, &CsmKey_Mac_SecLevel5, CRYPTO_PROCESSING_SYNC, CRYPTO_USE_FNC },//CsmJob_SecLevel5_MacVerify
-		{JOBID_HASH, JOBPRIO_HASH, CRYPTO_USE_FNC, &Notification_Hash, &CsmPrimitives_Hash, &CsmQueue_0, NULL, CRYPTO_PROCESSING_SYNC, CRYPTO_USE_FNC },		//CsmJob_Hash
 		{JOBID_SIGNATUREGENERATE, JOBPRIO_SIGNATUREGENERATE, CRYPTO_USE_FNC, &Notification_SignatureGenerate, &CsmPrimitives_SignatureGenerate, &CsmQueue_0, &CsmKey_SignatureGenerate, CRYPTO_PROCESSING_SYNC, CRYPTO_USE_FNC},		//CsmJob_SignatureGenerate
 		{JOBID_SIGNATUREVERIFY, JOBPRIO_SIGNATUREVERIFY, CRYPTO_USE_FNC,&Notification_SignatureVerify,&CsmPrimitives_SignatureVerify,&CsmQueue_0,&CsmKey_SignatureVerify, CRYPTO_PROCESSING_SYNC, CRYPTO_USE_FNC}		//CsmJob_SignatureVerify
 	},
@@ -111,21 +103,19 @@ const Csm_ConfigType Csm_config =
 		{ CSM_KEY_RSA_PRIVATE ,& (CryIf_config.CryIfKeys[3]) , TRUE },				//CsmKey_RSA_Private
 		{ CSM_KEY_RSA_PUBLIC , &(CryIf_config.CryIfKeys[4]) , TRUE}					//CsmKey_RSA_Public
 	},
-	{ {CRYPTO_ALGOFAM_SHA2_256, CRYPTO_ALGOFAM_SHA2_256, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CMAC , &CsmAlgorithmModeCustom, 32u, 32u }, {0}, {0}, {0}, {0}, {0} },			//CsmPrimitives_Hash
-	{ {0}, {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, BIT128RESULT }, {0}, {0}, {0}, {0} },	//CsmPrimitives_SecLevel1_MacGenerate
-	{ {0}, {0}, {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, 32u }, {0}, {0}, {0} },			//CsmPrimitives_SecLevel1_MacVerify
-	{ {0}, {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, BIT128RESULT }, {0}, {0}, {0}, {0} },	//CsmPrimitives_SecLevel3_MacGenerate
-	{ {0}, {0}, {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, 32u }, {0}, {0}, {0} },			//CsmPrimitives_SecLevel3_MacVerify
-	{ {0}, {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, BIT128RESULT }, {0}, {0}, {0}, {0} },	//CsmPrimitives_SecLevel5_MacGenerate
-	{ {0}, {0}, {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, 32u }, {0}, {0}, {0} },			//CsmPrimitives_SecLevel5_MacVerify
-	{ {0}, {0}, {0}, {CRYPTO_ALGOFAM_NOT_SET, CRYPTO_ALGOFAM_NOT_SET, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_NOT_SET , &CsmAlgorithmModeCustom, 32u }, {0}, {0} },				//CsmPrimitives_SeedGenerate
-	{ {0}, {0}, {0}, {0}, {CRYPTO_ALGOFAM_RSA, CRYPTO_ALGOFAM_NOT_SET, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5 , &CsmAlgorithmModeCustom, 32u, RSAPRIVATEKEYLENGTH, BYTE256RESULT }, {0} },	//CsmPrimitives_SignatureGenerate
-	{ {0}, {0}, {0}, {0}, {0}, {CRYPTO_ALGOFAM_RSA, CRYPTO_ALGOFAM_NOT_SET, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5 , &CsmAlgorithmModeCustom, 32u, RSAPUBLICKEYLENGTH, 32u } },	//CsmPrimitives_SignatureVerify
+	{ {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, BIT128RESULT }, {0}, {0}, {0}, {0} },	//CsmPrimitives_SecLevel1_MacGenerate
+	{ {0}, {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, 32u }, {0}, {0}, {0} },			//CsmPrimitives_SecLevel1_MacVerify
+	{ {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, BIT128RESULT }, {0}, {0}, {0}, {0} },	//CsmPrimitives_SecLevel3_MacGenerate
+	{ {0}, {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, 32u }, {0}, {0}, {0} },			//CsmPrimitives_SecLevel3_MacVerify
+	{ {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, BIT128RESULT }, {0}, {0}, {0}, {0} },	//CsmPrimitives_SecLevel5_MacGenerate
+	{ {0}, {CRYPTO_ALGOFAM_AES, CRYPTO_ALGOFAM_AES, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_CBC , &CsmAlgorithmModeCustom, BYTE16KEY, 32u, 32u }, {0}, {0}, {0} },			//CsmPrimitives_SecLevel5_MacVerify
+	{ {0}, {0}, {CRYPTO_ALGOFAM_NOT_SET, CRYPTO_ALGOFAM_NOT_SET, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_NOT_SET , &CsmAlgorithmModeCustom, 32u }, {0}, {0} },				//CsmPrimitives_SeedGenerate
+	{ {0}, {0}, {0}, {CRYPTO_ALGOFAM_RSA, CRYPTO_ALGOFAM_NOT_SET, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5 , &CsmAlgorithmModeCustom, 32u, RSAPRIVATEKEYLENGTH, BYTE256RESULT }, {0} },	//CsmPrimitives_SignatureGenerate
+	{ {0}, {0}, {0}, {0}, {CRYPTO_ALGOFAM_RSA, CRYPTO_ALGOFAM_NOT_SET, &CsmAlgorithmFamilyCustom, &CsmAlgorithmFamilyCustom, CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5 , &CsmAlgorithmModeCustom, 32u, RSAPUBLICKEYLENGTH, 32u } },	//CsmPrimitives_SignatureVerify
 	{	//CsmQueues
 		{&(CryIf_config.CryIfChannels[0]), 1u, &Csm_MainFunction}
 	},
 	{	//CsmCallbacks
-		{&Notification_Hash},
 		{&Notification_SeedGenerate},
 		{&Notification_SecLevel1_MacGenerate},
 		{&Notification_SecLevel1_MacVerify},
@@ -141,9 +131,6 @@ const Csm_ConfigType Csm_config =
 
 
 //RunTime Configuration
-
-Crypto_PrimitiveInfoType Crypto_PrimitiveInfo_Hash = { 0 };						
-const Crypto_JobPrimitiveInfoType Crypto_JobPrimitiveInfo_Hash = { 0 };			
 
 Crypto_PrimitiveInfoType Crypto_PrimitiveInfo_SeedGenerate = { CRYPTO_RANDOMGENERATE, CRYPTO_ALGOFAM_RNG, CRYPTO_ALGOFAM_NOT_SET, 0u, CRYPTO_ALGOMODE_CTRDRBG };
 const Crypto_JobPrimitiveInfoType Crypto_JobPrimitiveInfo_SeedGenerate = { CALLBACK_ID_SEEDGENERATE, &Crypto_PrimitiveInfo_SeedGenerate, 0u, CRYPTO_PROCESSING_SYNC };
@@ -186,7 +173,6 @@ rnt_cfg rnt =
 		{ JOBID_SECLEVEL3_MACVERIFY, {0}, {0}, &Crypto_JobPrimitiveInfo_SecLevel3_MacVerify, {0}, 0u, 0u, JOBPRIO_SECLEVEL3_MACVERIFY },
 		{ JOBID_SECLEVEL5_MACGENERATE, {0}, {0}, &Crypto_JobPrimitiveInfo_SecLevel5_MacGenerate, {0}, 0u, 0u, JOBPRIO_SECLEVEL5_MACGENERATE },
 		{ JOBID_SECLEVEL5_MACVERIFY, {0}, {0}, &Crypto_JobPrimitiveInfo_SecLevel5_MacVerify, {0}, 0u, 0u, JOBPRIO_SECLEVEL5_MACVERIFY },
-		{ JOBID_HASH, {0}, {0}, &Crypto_JobPrimitiveInfo_Hash, {0}, 0u, 0u, JOBPRIO_HASH },
 		{ JOBID_SIGNATUREGENERATE, {0}, {0}, &Crypto_JobPrimitiveInfo_SignatureGenerate, {0}, 0u, 0u, JOBPRIO_SIGNATUREGENERATE },
 		{ JOBID_SIGNATUREVERIFY, {0}, {0}, &Crypto_JobPrimitiveInfo_SignatureVerify, {0}, 0u, 0u, JOBPRIO_SIGNATUREVERIFY }
 	}

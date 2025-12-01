@@ -9,7 +9,6 @@
 #include "Ecuc.h"
 
 
-void Notification_Hash(void);
 void Notification_SeedGenerate(void);
 void Notification_SecLevel1_MacGenerate(void);
 void Notification_SecLevel1_MacVerify(void);
@@ -29,7 +28,6 @@ typedef enum
 	JOBPRIO_SECLEVEL3_MACVERIFY,
 	JOBPRIO_SECLEVEL5_MACGENERATE,
 	JOBPRIO_SECLEVEL5_MACVERIFY,
-	JOBPRIO_HASH,
 	JOBPRIO_SIGNATUREGENERATE,
 	JOBPRIO_SIGNATUREVERIFY,
 }JobPrioritys;
@@ -43,7 +41,6 @@ typedef enum
 	CALLBACK_ID_SECLEVEL3_MACVERIFY,
 	CALLBACK_ID_SECLEVEL5_MACGENERATE,
 	CALLBACK_ID_SECLEVEL5_MACVERIFY,
-	CALLBACK_ID_HASH,
 	CALLBACK_ID_SIGNATUREGENERATE,
 	CALLBACK_ID_SIGNATUREVERIFY
 }Callback_Ids;
@@ -232,20 +229,6 @@ typedef struct CsmInOutRedirections
 
 typedef struct CsmPrimitives
 {
-	struct CsmHash 
-	{
-		struct CsmHashConfig
-		{
-			Crypto_AlgorithmFamilyType CsmHashAlgorithmFamily;
-			Crypto_AlgorithmFamilyType CsmHashAlgorithmSecondaryFamily;
-			Crypto_AlgorithmFamilyType* CsmHashAlgorithmFamilyCustomRef;
-			Crypto_AlgorithmFamilyType* CsmHashAlgorithmSecondaryFamilyCustomRef;
-			Crypto_AlgorithmModeType CsmHashAlgorithmMode;
-			Crypto_AlgorithmModeType* CsmHashAlgorithmModeCustomRef;
-			uint32 CsmHashDataMaxLength;
-			uint32 CsmHashResultLength;
-		};
-	};
 	struct CsmMacGenerate
 	{
 		struct CsmMacGenerateConfig
@@ -337,7 +320,6 @@ typedef enum
 	JOBID_SECLEVEL3_MACVERIFY,
 	JOBID_SECLEVEL5_MACGENERATE,
 	JOBID_SECLEVEL5_MACVERIFY,
-	JOBID_HASH,
 	JOBID_SIGNATUREGENERATE,
 	JOBID_SIGNATUREVERIFY,
 	MAX_JOBID
@@ -362,9 +344,8 @@ typedef struct CsmJob
 typedef struct Csm_ConfigType
 {
 	CsmGeneral CsmGeneral_;
-	CsmJob CsmJobs[10];
+	CsmJob CsmJobs[9];
 	CsmKey CsmKeys[5];
-	CsmPrimitives CsmPrimitives_Hash;
 	CsmPrimitives CsmPrimitives_SecLevel1_MacGenerate;
 	CsmPrimitives CsmPrimitives_SecLevel1_MacVerify;
 	CsmPrimitives CsmPrimitives_SecLevel3_MacGenerate;
@@ -375,7 +356,7 @@ typedef struct Csm_ConfigType
 	CsmPrimitives CsmPrimitives_SignatureGenerate;
 	CsmPrimitives CsmPrimitives_SignatureVerify;
 	CsmQueue CsmQueues[1];
-	CsmCallback CsmCallbacks[10];
+	CsmCallback CsmCallbacks[9];
 	//CsmInOutRedirections CsmInOutRedirections_;
 	CsmMainFunction CsmMainFunction_;
 }Csm_ConfigType;

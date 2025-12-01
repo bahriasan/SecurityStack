@@ -29,5 +29,10 @@ SecurityStack 0x11 0x02 0x29 0x06 SIGNATURE
 
 TO DO:
 
+1. KeyManagement Services to be added
+
+
+
+ONGOING: 
+
 1. AUTOSAR Requirement Tracking List will be added for Csm/CryIf/CryptoDriver
-2. KeyManagement Services to be added
