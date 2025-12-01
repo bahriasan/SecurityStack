@@ -98,8 +98,5 @@
     <ClCompile Include="Helper_RSA_Keygen.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="demo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

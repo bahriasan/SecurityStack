@@ -20,9 +20,6 @@ C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\Cs
 C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\Csm_Cfg.c(95,78): warning C4047: 'initializing': 'CsmCallback *' differs in levels of indirection from 'void (__cdecl *)(void)'
 C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\Csm_Cfg.c(96,73): warning C4047: 'initializing': 'CsmCallback *' differs in levels of indirection from 'void (__cdecl *)(void)'
 C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\Csm_Cfg.c(97,68): warning C4047: 'initializing': 'CsmCallback *' differs in levels of indirection from 'void (__cdecl *)(void)'
-  demo.c
-C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\demo.c(305,6): warning C4013: 'PEM_write_PrivateKey' undefined; assuming extern returning int
-C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\demo.c(321,6): warning C4013: 'PEM_write_PUBKEY' undefined; assuming extern returning int
   Ecuc.c
   Helper_RSA_Keygen.c
 C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\Helper_RSA_Keygen.c(146,12): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
@@ -50,9 +47,8 @@ C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\ma
   Generating Code...
 C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\Csm.c(154,1): warning C4716: 'Csm_Hash': must return a value
 C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\CryptoWrapper.c(512,1): warning C4716: 'Hash': must return a value
-C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\CryptoWrapper.c(458,1): warning C4715: 'Signature_Verify_Init': not all control paths return a value
 C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\CryptoWrapper.c(310,1): warning C4715: 'Signature_Generate_Init': not all control paths return a value
+C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\CryptoWrapper.c(458,1): warning C4715: 'Signature_Verify_Init': not all control paths return a value
 C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\SecurityStack\CryptoWrapper.c(46,1): warning C4715: 'getCipherNameStr': not all control paths return a value
-  LINK : C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\x64\Debug\SecurityStack.exe not found or not built by the last incremental link; performing full link
      Creating library C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\x64\Debug\SecurityStack.lib and object C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\x64\Debug\SecurityStack.exp
   SecurityStack.vcxproj -> C:\Users\BahriAsan\Documents\GitHub\SecurityStack\SecurityStack\x64\Debug\SecurityStack.exe
